@@ -14,129 +14,131 @@ body {
   flex-direction: column;
 }
 
+/* header */
+
 header {
   position: absolute;
-  left: 292px;
+  left: 266px;
+  margin-bottom: 48px;
 }
 
-a {
+header h1 a {
   text-decoration: none;
+  display: inline-block;
+  height: 30px;
 }
 
-.main-link {
-  display: block;
-  width: 156px;
+header h1 a .main-link img {
+  width: 176px;
   height: 40px;
 }
 
-.logo {
-  width: 156px;
-  height: 40px;
-}
+/* section */
 
 section {
   position: absolute;
-  top: 48px;
-  left: 292px;
+  display: block;
+  top: 90px;
+  left: 266px;
 }
 
-.today-discover {
+section .today-discover {
   font-size: 24px;
   font-weight: 500;
   color: var(--color-black);
   display: inline-block;
 }
 
-.text {
+section .text {
   color: var(--color-gray);
 }
 
-.today-hot {
+section .today-hot {
   font-size: 16px;
   font-weight: 500;
   color: var(--color-gray);
   display: inline-block;
 }
 
+/* article */
+
 article {
   position: relative;
-  top: 130px;
-  width: 1020px;
+  top: 154px;
+  width: 1036px;
   height: 1010px;
   margin: 0 auto;
   align-items: center;
 }
 
-.products {
-  float: left;
-  margin-bottom: 19px;
-}
-
-/* .product1-link {
-  display: inline-block;
-  width: 450px;
-  height: 310px;
-}
-
-.product2-link {
-  display: inline-block;
-  width: 208px;
-  height: 310px;
-} */
-
-button {
+article .products {
   position: relative;
-  width: 30px;
-  height: 30px;
+  float: left;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+article .products:hover {
+  border: 1px solid var(--color-blue);
+}
+
+article .big {
+  width: 502px;
+  height: 310px;
+  border: 1px solid var(--color-gray);
+}
+
+article .small {
+  width: 243px;
+  height: 310px;
+  border: 1px solid var(--color-gray);
+}
+
+article .big img {
+  position: absolute;
+  margin: 0 auto;
+  width: 472px;
+  height: 290px;
+}
+
+article .small img {
+  position: absolute;
+  margin: 0 auto;
+  width: 213px;
+  height: 290px;
+}
+
+article .products button {
+  position: absolute;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
   color: var(--color-gray-btn);
   background-color: black;
-  opacity: 30%;
+  opacity: 20%;
   border: none;
-  top: -20px;
-  left: 45px;
+  top: 248px;
+  left: 20px;
 }
 
-button:hover {
+article .products button:hover,
+article .products button:focus {
   background-color: #0073e9;
   opacity: 100%;
   color: var(--color-white);
+  width: 112px;
+  height: 42px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.5s;
 }
 
-button:hover::before {
+article .products button:hover::before,
+article .products button:focus::before {
+  color: var(--color-white);
   content: '구매하기';
-  width: 80px;
-  height: 30px;
+  margin-right: 16px;
 }
-
-.product1 {
-  width: 450px;
-  height: 310px;
-  border: 1px solid var(--color-gray);
-}
-
-.product1:hover,
-.product1:focus {
-  border: 1px solid var(--color-blue);
-}
-
-.product2 {
-  width: 208px;
-  height: 310px;
-  border: 1px solid var(--color-gray);
-}
-
-.product2:hover {
-  border: 1px solid var(--color-blue);
-}
-
-/* .product1 {
-  width: 310px;
-  height: 210px;
-  border: 1px solid var(--color-gray);
-}
-
-.product2 {
-  width: 147px;
-  height: 210px;
-  border: 1px solid var(--color-gray);
-} */
