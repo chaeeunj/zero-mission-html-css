@@ -81,8 +81,26 @@ article .products {
   display: flex;
 }
 
-article .products:hover {
+article .products:hover,
+article .products:focus {
   border: 1px solid var(--color-blue);
+
+  .btn {
+    background-color: #0073e9;
+    opacity: 100%;
+    color: var(--color-white);
+    width: 112px;
+    height: 42px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.5s;
+  }
+
+  .btn::before {
+    color: var(--color-white);
+    content: '구매하기';
+    margin-right: 16px;
+  }
 }
 
 article .big {
@@ -111,8 +129,11 @@ article .small img {
   height: 290px;
 }
 
-article .products button {
+article .products span {
+  display: inline-block;
   position: absolute;
+  top: 248px;
+  left: 20px;
   cursor: pointer;
   width: 42px;
   height: 42px;
@@ -120,25 +141,5 @@ article .products button {
   background-color: black;
   opacity: 20%;
   border: none;
-  top: 248px;
-  left: 20px;
-}
-
-article .products button:hover,
-article .products button:focus {
-  background-color: #0073e9;
-  opacity: 100%;
-  color: var(--color-white);
-  width: 112px;
-  height: 42px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background-color 0.5s;
-}
-
-article .products button:hover::before,
-article .products button:focus::before {
-  color: var(--color-white);
-  content: '구매하기';
-  margin-right: 16px;
+  padding: 10px 18px;
 }
